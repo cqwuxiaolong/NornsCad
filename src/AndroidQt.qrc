@@ -1,0 +1,69 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="main.qml">../res/qml/main.qml</file>
+        <file alias="CommandLine.qml">../res/qml/CommandLine.qml</file>
+        <file alias="ToolDraw.qml">../res/qml/ToolDraw.qml</file>
+        <file alias="BoolToolsBar.qml">../res/qml/BoolToolsBar.qml</file>
+        <file alias="ColorSelector.qml">../res/qml/ColorSelector.qml</file>
+        <file alias="html5kellycolorpicker.js">../res/qml/html5kellycolorpicker.js</file>
+        <file alias="html5kellycolorpicker.min.js">../res/qml/html5kellycolorpicker.min.js</file>
+        <file alias="ColorPicker.html">../res/qml/ColorPicker.html</file>
+        <file alias="qwebchannel.js">../res/qml/qwebchannel.js</file>
+        <file alias="ntc.js">../res/qml/ntc.js</file>
+        <file alias="common.css">../res/qml/common.css</file>
+        <file>qtquickcontrols2.conf</file>
+
+        <file alias="ic_action_collection.png">../res/icons/ic_action_collection.png</file>
+        
+        <file alias="view-front">../res/icons/view-front.svg</file>
+        <file alias="view-top">../res/icons/view-top.svg</file>
+        <file alias="view-axonometric">../res/icons/view-axonometric.svg</file>
+        <file alias="view-bottom">../res/icons/view-bottom.svg</file>
+        <file alias="view-rear">../res/icons/view-rear.svg</file>
+        <file alias="view-right">../res/icons/view-right.svg</file>
+        <file alias="view-left">../res/icons/view-left.svg</file>
+        <file alias="view-fullscreen">../res/icons/view-fullscreen.png</file>
+        
+        <file alias="eject.png">../res/icons/eject.png</file>
+        <file alias="drag.png">../res/icons/drag.png</file>
+        <file alias="view_comp_off">../res/icons/view_comp_off.png</file>
+        <file alias="view_comp_on">../res/icons/view_comp_on.png</file>
+
+        <file alias="raytracing">../res/icons/raytracing.png</file>
+        <file alias="reflections">../res/icons/reflections.png</file>
+        <file alias="shadows">../res/icons/shadows.png</file>
+        <file alias="antialiasing">../res/icons/antialiasing.png</file>
+        
+        <file alias="tool_shading">../res/icons/tool_shading.png</file>
+        <file alias="tool_transparency">../res/icons/tool_transparency.png</file>
+        <file alias="tool_wireframe">../res/icons/tool_wireframe.png</file>
+        <file alias="color_palette">../res/icons/color_palette.png</file>
+        
+
+        <file alias="ellipse.png">../res/icons/ellipse.png</file>
+        <file alias="explode.png">../res/icons/explode.png</file>
+        <file alias="hatch.png">../res/icons/hatch.png</file>
+        <file alias="line">../res/icons/line.png</file>
+        <file alias="measure.png">../res/icons/measure.png</file>
+        <file alias="measure angle.png">../res/icons/measure angle.png</file>
+        <file alias="measure radius.png">../res/icons/measure radius.png</file>
+        <file alias="measure volume.png">../res/icons/measure volume.png</file>
+        <file alias="mirror.png">../res/icons/mirror.png</file>
+        <file alias="offset.png">../res/icons/offset.png</file>
+        <file alias="polyline.png">../res/icons/polyline.png</file>
+        <file alias="print.png">../res/icons/print.png</file>
+        <file alias="rectangle.png">../res/icons/rectangle.png</file>
+        <file alias="redo.png">../res/icons/redo.png</file>
+        <file alias="save.png">../res/icons/save.png</file>
+        <file alias="save as.png">../res/icons/save as.png</file>
+        <file alias="text.png">../res/icons/text.png</file>
+        <file alias="undo.png">../res/icons/undo.png</file>
+        <file alias="arc.png">../res/icons/arc.png</file>
+        <file alias="circle.png">../res/icons/circle.png</file>
+        <file alias="nothing.png">../res/icons/nothing.png</file>
+
+        <file alias="cut.png">../res/icons/cut.png</file>
+        <file alias="fuse.png">../res/icons/fuse.png</file>
+        <file alias="common.png">../res/icons/common.png</file>
+    </qresource>
+</RCC>

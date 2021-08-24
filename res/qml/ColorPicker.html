@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Color Picker</title>
+        <meta charset="UTF-8">
+        <script src="../html5kellycolorpicker.min.js"></script>
+        <script type="text/javascript" src="qwebchannel.js"></script>
+        <script type="text/javascript" src="ntc.js"></script>
+        <!-- <link href="common.css" rel="stylesheet"> -->
+        <style>
+            #color-pickers {
+                padding-top: 0px;
+                text-align: center;
+            }
+
+            #color-pickers div {
+                display: inline-block;
+            }
+
+            #color-pickers input {
+                width: 60px;
+                border-radius: 5px;
+                border: 1px solid rgb(209, 209, 209);
+                /* text-transform: uppercase; */
+            }
+
+            /* #color-pickers button {
+                width: 150px;
+            }
+
+            #color-gradient {
+                margin: 0 auto;
+                margin-top: 24px;
+                width: 150px;
+                height: 150px;
+                border: 2px solid rgba(176, 53, 165, 0.8);
+            } */
+        </style>
+    </head>
+
+    <body>
+        <div id="color-pickers">
+            <div id="color-picker-quad"></div>
+            <input id="colorinput" type="text" value="none" style="text-transform:uppercase;" />
+            <!-- <input id="colorname" type="text" value="none" /> -->
+
+        </div>
+        <script>
+            function prefixZero(n, m) {
+                var _a = (Array(m).join(0) + n).slice(-m);
+                return _a;
+            }
+ 
+            var qwebchannel = new QWebChannel(qt.webChannelTransport, function (channel) {
+                // all published objects are available in channel.objects under
+                // the identifier set in their attached WebChannel.id property
+                var foo = channel.objects.foo;
+                // var dManager = channel.objects.bar;
+
+                // access a property
+                //alert(foo.hello);
+
+                // connect to a signal
+                foo.someSignal.connect(function (message) {
+                    //document.getElementById("colorname").value=message;
+                    document.getElementById("colorinput").value = ntc.shadergb(message);
+                    document.getElementById("colorinput").click();
+                });
+
+                // invoke a method, and receive the return value asynchronously
+                // foo.someMethod("fdasfda", function (ret) {
+                //     // alert("Got return value: " + ret);
+                // });
+
+
+                var colorPickerQ = new KellyColorPicker({
+                    place: 'color-picker-quad',
+                    size: 150,
+                    input: 'colorinput',
+                    method: 'quad',
+                    color: '#ab56a3',
+                    // alpha_slider : true
+                });
+
+                var onchange = function (self) {
+                    var rgbaQ = colorPickerQ.getCurColorRgba();
+                    var msg = "#" + prefixZero(rgbaQ.r.toString(16), 2) + prefixZero(rgbaQ.g.toString(16), 2) + prefixZero(rgbaQ.b.toString(16), 2);
+                    foo.someMethod(msg.toUpperCase()); //+ rgbaQ.a, function (ret) { }
+                    // var n_match = ntc.name(msg);
+                    // document.getElementById("colorname").value = n_match[1];
+                    // document.getElementById("colorname").style.backgroundColor = n_match[0];
+                    // document.getElementById("colorname").style.color=document.getElementById("colorinput").style.color;
+                };
+                colorPickerQ.addUserEvent("change", onchange);
+            });
+        </script>
+    </body>
+
+</html>
