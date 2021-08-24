@@ -9,7 +9,7 @@
 <p>the project prewiew</p>
 <p>https://www.bilibili.com/video/BV1sL411b7yh/</p>
 <p>linux</p>
-<p>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/cqwuxiaolong/OCCT/build/lin64/gcc/lib:/usr/local/lib64/:/home/cqwuxiaolong/OpenSceneGraph/build/lib/</p>
+<p>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/cqwuxiaolong/OCCT/build/lin64/gcc/lib:/usr/local/lib64/</p>
 <p>export CASROOT=/home/cqwuxiaolong/OCCT</p>
 <p>windows</p>
 <p>copy dll to exe dir and run command "windeployqt NQml.exe"</p>
