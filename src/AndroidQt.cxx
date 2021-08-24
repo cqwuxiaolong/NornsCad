@@ -1403,26 +1403,26 @@ gp_Pnt AndroidQt::mouse2ProjIntersector(Standard_Integer theX, Standard_Integer 
 #include<QElapsedTimer>
 void AndroidQt::makeBox()
 {
-    TopoDS_Shape aTopoBox = BRepPrimAPI_MakeBox(random(), random(), random()).Shape();
-    //Handle(AIS_Shape) anAisBox = new AIS_Shape(aTopoBox);
-    QElapsedTimer time;  
-    time.start();
-    NCollection_Vector<Handle(AIS_InteractiveObject)> tmp;
-    for(int i=0;i<100000;i++)
-    {
-        TopoDS_Shape aTopoBox = BRepPrimAPI_MakeBox(random(), random(), random()).Shape();
-        Handle(AIS_Shape) aT=new AIS_Shape(aTopoBox);
-        tmp.Append(aT);
-        aTopoBox.Free();
-    }
-    qDebug()<<time.elapsed()<<"create ms";  
-    time.restart();
-    for (NCollection_Vector<Handle(AIS_InteractiveObject)>::Iterator aPntIt(tmp); aPntIt.More(); aPntIt.Next())
-    {
-        myContext->Display(aPntIt.Value(), Standard_False);
-    }
-    qDebug()<<time.elapsed()<<"show ms";  
-    qDebug()<<tmp.Size();  
+    // TopoDS_Shape aTopoBox = BRepPrimAPI_MakeBox(random(), random(), random()).Shape();
+    // //Handle(AIS_Shape) anAisBox = new AIS_Shape(aTopoBox);
+    // QElapsedTimer time;  
+    // time.start();
+    // NCollection_Vector<Handle(AIS_InteractiveObject)> tmp;
+    // for(int i=0;i<100000;i++)
+    // {
+    //     TopoDS_Shape aTopoBox = BRepPrimAPI_MakeBox(random(), random(), random()).Shape();
+    //     Handle(AIS_Shape) aT=new AIS_Shape(aTopoBox);
+    //     tmp.Append(aT);
+    //     aTopoBox.Free();
+    // }
+    // qDebug()<<time.elapsed()<<"create ms";  
+    // time.restart();
+    // for (NCollection_Vector<Handle(AIS_InteractiveObject)>::Iterator aPntIt(tmp); aPntIt.More(); aPntIt.Next())
+    // {
+    //     myContext->Display(aPntIt.Value(), Standard_False);
+    // }
+    // qDebug()<<time.elapsed()<<"show ms";  
+    // qDebug()<<tmp.Size();  
     // anAisBox->SetDisplayMode(1);
     //anAisBox->SetColor(Quantity_NOC_AZURE);
     //myContext->Display(anAisBox, Standard_False);
