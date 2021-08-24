@@ -1,3 +1,5 @@
+<p>高中学历不能撸代码？我X</p>
+<p>High school education can't 'Lu' code? I xxx</p>
 <p>opencascade 7.6</p>
 <p>qt 5.15.2</p>
 <p>Cmake 3.21.1</p>
